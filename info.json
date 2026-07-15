@@ -1,0 +1,58 @@
+{
+	"java": {
+		"jpa": {
+			"name": "persistence",
+			"extension": ".xml",
+			"route": "./src/main/resources/META-INF/~",
+			"description": "JPA Persistence Configuration",
+			"version": {
+				"1.2": "./lib/java/jpa/v1.2.ts",
+				"1.3": "./lib/java/jpa/v1.3.ts"
+			}
+		},
+		"maven": {
+			"name": "pom",
+			"extension": ".xml",
+			"route": "./~",
+			"description": "Maven Project Configuration",
+			"version": {
+				"1.8": "./lib/java/maven/v1.8.ts",
+				"1.9": "./lib/java/maven/v1.9.ts"
+			}
+		},
+		"hibernate": {
+			"name": "hibernate.cfg",
+			"extension": ".xml",
+			"route": "./src/main/resources/~",
+			"description": "Hibernate Configuration",
+			"version": {
+				"5.4": "./lib/java/hibernate/v5.4.ts",
+				"6.0": "./lib/java/hibernate/v6.0.ts"
+			}
+		}
+	},
+	"javascript": {
+		"package": {
+			"name": "package",
+			"extension": ".json",
+			"route": "./~",
+			"description": "Node.js Package Configuration",
+			"version": {
+				"2.0": "./lib/javascript/package/v2.0.ts",
+				"2.1": "./lib/javascript/package/v2.1.ts"
+			}
+		}
+	},
+	"csharp": {
+		"csproj": {
+			"name": "project",
+			"extension": ".csproj",
+			"route": "./~",
+			"description": ".NET Project File",
+			"version": {
+				"net6.0": "./lib/csharp/csproj/net6.0.ts",
+				"net7.0": "./lib/csharp/csproj/net7.0.ts"
+			}
+		}
+	}
+}
