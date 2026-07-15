@@ -89,7 +89,7 @@
 		"typecheck": "tsc --noEmit",
 		"release": "bumpp",
 		"ext:package": "vsce package --no-dependencies",
-		"ext:publish": "vsxpub --no-dependencies"
+		"ext:publish": "vsce publish --no-dependencies"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.85.0",
