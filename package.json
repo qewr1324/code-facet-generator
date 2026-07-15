@@ -93,24 +93,6 @@
 					"description": "Default language for generated facets"
 				}
 			}
-		},
-		"views": {
-			"facet-generator": [
-				{
-					"id": "facetGeneratorTree",
-					"name": "Facet Generator",
-					"icon": "media/facet-icon.svg"
-				}
-			]
-		},
-		"viewsContainers": {
-			"activitybar": [
-				{
-					"id": "facet-generator",
-					"title": "Facet Generator",
-					"icon": "media/facet-icon.svg"
-				}
-			]
 		}
 	},
 	"scripts": {

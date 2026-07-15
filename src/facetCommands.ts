@@ -1,20 +1,12 @@
 import * as vscode from "vscode";
 import { ConfigLoader } from "./utils/configLoader.js";
-import { FacetTreeProvider } from "./facetTreeProvider.js";
 import { FileGenerator } from "./utils/fileGenerator.js";
 
-export function registerFacetCommands(context: vscode.ExtensionContext, configLoader: ConfigLoader, treeProvider: FacetTreeProvider) {
+export function registerFacetCommands(context: vscode.ExtensionContext, configLoader: ConfigLoader) {
 	// Command: Open Panel (from status bar click)
 	context.subscriptions.push(
 		vscode.commands.registerCommand("facetGenerator.generateFromStatusBar", async () => {
 			await showGenerationFlow(configLoader);
-		}),
-	);
-
-	// Command: Open Panel
-	context.subscriptions.push(
-		vscode.commands.registerCommand("facetGenerator.openPanel", () => {
-			vscode.commands.executeCommand("workbench.view.extension.facet-generator");
 		}),
 	);
 
@@ -23,7 +15,6 @@ export function registerFacetCommands(context: vscode.ExtensionContext, configLo
 		vscode.commands.registerCommand("facetGenerator.generateFile", async (language: string, facetKey: string, version: string) => {
 			const generator = new FileGenerator(context, configLoader);
 			await generator.generateFile(language, facetKey, version);
-			treeProvider.refresh();
 		}),
 	);
 
@@ -31,15 +22,7 @@ export function registerFacetCommands(context: vscode.ExtensionContext, configLo
 	context.subscriptions.push(
 		vscode.commands.registerCommand("facetGenerator.reloadConfig", () => {
 			configLoader.reloadConfig();
-			treeProvider.refresh();
 			vscode.window.showInformationMessage("✅ Configuration reloaded!");
-		}),
-	);
-
-	// Command: Refresh Tree
-	context.subscriptions.push(
-		vscode.commands.registerCommand("facetGenerator.refreshTree", () => {
-			treeProvider.refresh();
 		}),
 	);
 }
