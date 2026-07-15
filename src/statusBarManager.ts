@@ -16,9 +16,12 @@ export class StatusBarManager {
 
 	private initialize() {
 		// Set custom SVG icon
-		const iconPath = path.join(this.context.extensionPath, "media", "facet-icon.svg");
+		const iconPaths = path.join(this.context.extensionPath, "media", "facet-icon.svg");
 
-		this.statusBarItem.text = `$(facet-icon) Facet Gen`;
+		// this.statusBarItem.text = `$(right-panel-show) $(right-panel-hide) $(open-preview) $(code-oss)`;
+		// this.statusBarItem.text = `$(right-panel-show) $(right-panel-hide) $(open-preview) $(circuit-board)`;
+		this.statusBarItem.text = `$(right-panel-show) $(right-panel-hide) $(open-preview)`;
+		// this.statusBarItem.text = `$(new-collection) Facet Gen`;
 		this.statusBarItem.tooltip = "Code Facet Generator\nClick to generate code files";
 		this.statusBarItem.command = "facetGenerator.generateFromStatusBar";
 		this.statusBarItem.backgroundColor = new vscode.ThemeColor("statusBarItem.prominentBackground");

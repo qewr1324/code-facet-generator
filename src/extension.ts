@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(statusBarManager);
 
 	// Show welcome message
-	vscode.window.showInformationMessage("🎯 Code Facet Generator ready! Click the facet icon in status bar.");
+	// vscode.window.showInformationMessage("🎯 Code Facet Generator ready! Click the facet icon in status bar.");
 }
 
 export function deactivate() {}
