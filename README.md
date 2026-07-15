@@ -134,7 +134,7 @@
 
 <div align="center">
 
-![Demo](res/review.gif)
+![Demo](https://github.com/qewr1324/code-facet-generator/raw/main/res/review.gif)
 
 </div>
 
