@@ -56,16 +56,8 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "facetGenerator.openPanel",
-				"title": "Code Facet: Open Generator Panel"
-			},
-			{
 				"command": "facetGenerator.generateFromStatusBar",
 				"title": "Code Facet: Generate from Status Bar"
-			},
-			{
-				"command": "facetGenerator.reloadConfig",
-				"title": "Code Facet: Reload Configuration"
 			}
 		],
 		"configuration": {
