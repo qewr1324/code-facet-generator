@@ -1,8 +1,8 @@
 import * as vscode from "vscode";
 import * as path from "path";
 import * as fs from "fs";
-import { ConfigLoader, FacetConfig } from "./configLoader";
-import { PathResolver } from "./pathResolver";
+import { ConfigLoader, FacetConfig } from "./configLoader.js";
+import { PathResolver } from "./pathResolver.js";
 
 export class FileGenerator {
 	constructor(

@@ -1,8 +1,8 @@
 import * as vscode from "vscode";
-import { StatusBarManager } from "./statusBarManager";
-import { FacetTreeProvider } from "./facetTreeProvider";
-import { registerFacetCommands } from "./facetCommands";
-import { ConfigLoader } from "./utils/configLoader";
+import { StatusBarManager } from "./statusBarManager.js";
+import { FacetTreeProvider } from "./facetTreeProvider.js";
+import { registerFacetCommands } from "./facetCommands.js";
+import { ConfigLoader } from "./utils/configLoader.js";
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log("🚀 Code Facet Generator activated");
@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
 	const configLoader = new ConfigLoader(context);
 
 	// Initialize Tree Provider
-	const facetTreeProvider = new FacetTreeProvider(configLoader);
+	const facetTreeProvider: any = new FacetTreeProvider(configLoader);
 
 	// Register Tree View
 	const treeView = vscode.window.createTreeView("facetGeneratorTree", {

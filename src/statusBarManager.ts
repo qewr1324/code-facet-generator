@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import * as path from "path";
-import { ConfigLoader } from "./utils/configLoader";
+import { ConfigLoader } from "./utils/configLoader.js";
 
 export class StatusBarManager {
 	private statusBarItem: vscode.StatusBarItem;

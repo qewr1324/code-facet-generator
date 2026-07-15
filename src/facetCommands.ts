@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
-import { ConfigLoader } from "./utils/configLoader";
-import { FacetTreeProvider } from "./facetTreeProvider";
-import { FileGenerator } from "./utils/fileGenerator";
+import { ConfigLoader } from "./utils/configLoader.js";
+import { FacetTreeProvider } from "./facetTreeProvider.js";
+import { FileGenerator } from "./utils/fileGenerator.js";
 
 export function registerFacetCommands(context: vscode.ExtensionContext, configLoader: ConfigLoader, treeProvider: FacetTreeProvider) {
 	// Command: Open Panel (from status bar click)

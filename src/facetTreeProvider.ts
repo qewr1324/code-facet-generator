@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { ConfigLoader, FacetConfig } from "./utils/configLoader";
+import { ConfigLoader, FacetConfig } from "./utils/configLoader.js";
 
 export class FacetTreeProvider implements vscode.TreeDataProvider<FacetTreeItem> {
 	private _onDidChangeTreeData: vscode.EventEmitter<FacetTreeItem | undefined | null | void> = new vscode.EventEmitter<FacetTreeItem | undefined | null | void>();
