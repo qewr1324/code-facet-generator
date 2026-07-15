@@ -72,7 +72,7 @@ export class ConfigLoader {
 
 			for (const [facetName, facetConfig] of Object.entries(facets as any)) {
 				const fc = facetConfig as FacetConfig;
-				if (!fc.name || !fc.extension || !fc.route || !fc.version) {
+				if ((!fc.name && !fc.extension) || !fc.route || !fc.version) {
 					throw new Error(`Invalid facet configuration: ${lang}.${facetName}`);
 				}
 			}

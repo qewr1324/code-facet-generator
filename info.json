@@ -12,8 +12,8 @@
             }
         },
         "gradle": {
-            "name": "build.gradle",
-            "extension": "",
+            "name": "build",
+            "extension": ".gradle",
             "route": "./~",
             "description": "Gradle Build Configuration",
             "version": {
