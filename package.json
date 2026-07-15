@@ -1,5 +1,6 @@
 {
 	"name": "code-facet-generator",
+	"type": "module",
 	"displayName": "Code Facet Generator",
 	"description": "🍃 Code Facet Generator - Dynamic facet-based code generator for multiple languages for 💠 VSCode. ",
 	"version": "1.0.0",
