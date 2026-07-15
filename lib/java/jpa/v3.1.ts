@@ -3,7 +3,7 @@ export function generate(params: any): string {
 <persistence version="3.0"
     xmlns="https://jakarta.ee/xml/ns/persistence"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schema-location="https://jakarta.ee/xml/ns/persistence
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
     https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
     
     <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
