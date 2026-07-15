@@ -11,3 +11,6 @@ eslint.config.mjs
 *.ts
 !**/*.d.ts
 node_modules/**
+res/*.mp4
+res/*.gif
+!res/facet-icon-big.png
