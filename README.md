@@ -67,7 +67,7 @@
 <!-- Image & Icon -->
 <div align="center">
   <a href="https://github.com/qewr1324/code-facet-generator">
-    <img src="./media/facet-icon.svg" alt="Code Facet Generator Icon" width="128" height="128" />
+    <img src="./res/facet-icon-big.png" alt="Code Facet Generator Icon" width="128" height="128" />
   </a>
   
   <h3>✨ Generate ready-to-use configuration files instantly ✨</h3>
