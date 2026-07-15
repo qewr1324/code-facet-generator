@@ -33,9 +33,7 @@
   </div>
 </div> -->
 
----
-
-<div align="center">
+<!-- <div align="center">
 
 <table>
 <tr>
@@ -60,7 +58,7 @@
   </div>
 </td>
 </tr>
-</table>
+</table> -->
 
 </div>
 
