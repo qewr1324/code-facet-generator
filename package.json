@@ -41,7 +41,7 @@
 	"activationEvents": [
 		"onStartupFinished"
 	],
-	"main": "./out/src/extension.js",
+	"main": "./dist/extension.cjs",
 	"files": [
 		"dist/**/*",
 		"media/**/*.svg",
@@ -114,17 +114,16 @@
 		}
 	},
 	"scripts": {
-		"vscode:prepublish": "npm run compile",
+		"vscode:prepublish": "bun run build",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"build": "tsdown src/index.ts --external vscode",
-		"dev": "nr build --watch --sourcemap",
+		"build": "tsdown src/extension.ts --external vscode",
+		"dev": "bun run build --watch --sourcemap",
 		"prepare": "echo 'Skipping update'",
 		"update": "echo 'Skipping vscode-ext-gen'",
 		"lint": "eslint .",
 		"test": "vitest",
 		"typecheck": "tsc --noEmit",
-		"vscode:prepublish:nr": "nr build",
 		"release": "bumpp",
 		"ext:package": "vsce package --no-dependencies",
 		"ext:publish": "vsxpub --no-dependencies"
