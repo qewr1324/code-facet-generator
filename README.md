@@ -130,6 +130,16 @@
 
 ---
 
+## 🎥 Demo
+
+<div align="center">
+
+![Demo](res/review.gif)
+
+</div>
+
+---
+
 ## 📖 What is Code Facet Generator?
 
 Code Facet Generator is a **VS Code extension** (or CLI tool) that generates ready-to-use configuration files for virtually any language, framework, or tool in your project.
