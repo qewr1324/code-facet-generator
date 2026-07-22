@@ -74,7 +74,7 @@
 
 <!-- Static Badges -->
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/user/code-facet-generator)
+[![Version](https://img.shields.io/github/v/release/qewr1324/code-facet-generator)](https://github.com/qewr1324/code-facet-generator)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Languages](https://img.shields.io/badge/languages-32%20categories-orange.svg)](#supported-languages--frameworks)
 [![Files](https://img.shields.io/badge/facets-327%2B-purple.svg)](#statistics)
