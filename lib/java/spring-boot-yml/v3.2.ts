@@ -15,6 +15,12 @@ spring:
   threads:
     virtual:
       enabled: true
+
+  # ==========================================================
+  # Database
+  # ==========================================================
+
+  # ---------- MySQL (Active) ----------
   datasource:
     url: jdbc:mysql://localhost:3306/mydb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
@@ -26,6 +32,62 @@ spring:
       idle-timeout: 300000
       connection-timeout: 20000
       max-lifetime: 1200000
+
+  # ---------- PostgreSQL ----------
+  # datasource:
+  #   url: jdbc:postgresql://localhost:5432/mydb
+  #   username: postgres
+  #   password: postgres
+  #   driver-class-name: org.postgresql.Driver
+  #   hikari:
+  #     maximum-pool-size: 20
+  #     minimum-idle: 10
+  #     idle-timeout: 300000
+  #     connection-timeout: 20000
+  #     max-lifetime: 1200000
+
+  # ---------- Oracle ----------
+  # datasource:
+  #   url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+  #   username: system
+  #   password: oracle
+  #   driver-class-name: oracle.jdbc.OracleDriver
+  #   hikari:
+  #     maximum-pool-size: 20
+  #     minimum-idle: 10
+  #     idle-timeout: 300000
+  #     connection-timeout: 20000
+  #     max-lifetime: 1200000
+
+  # ---------- H2 ----------
+  # datasource:
+  #   url: jdbc:h2:mem:mydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  #   username: sa
+  #   password:
+  #   driver-class-name: org.h2.Driver
+  #   hikari:
+  #     maximum-pool-size: 20
+  #     minimum-idle: 10
+  #     idle-timeout: 300000
+  #     connection-timeout: 20000
+  #     max-lifetime: 1200000
+
+  # ---------- MSSQL (SQL Server) ----------
+  # datasource:
+  #   url: jdbc:sqlserver://localhost:1433;databaseName=mydb;encrypt=true;trustServerCertificate=true
+  #   username: sa
+  #   password: YourStrong@Password
+  #   driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  #   hikari:
+  #     maximum-pool-size: 20
+  #     minimum-idle: 10
+  #     idle-timeout: 300000
+  #     connection-timeout: 20000
+  #     max-lifetime: 1200000
+
+  # ==========================================================
+  # JPA / Hibernate
+  # ==========================================================
   jpa:
     hibernate:
       ddl-auto: validate
@@ -33,7 +95,21 @@ spring:
     open-in-view: false
     properties:
       hibernate:
+        # ---------- MySQL (Active) ----------
         dialect: org.hibernate.dialect.MySQL8Dialect
+
+        # ---------- PostgreSQL ----------
+        # dialect: org.hibernate.dialect.PostgreSQLDialect
+
+        # ---------- Oracle ----------
+        # dialect: org.hibernate.dialect.OracleDialect
+
+        # ---------- H2 ----------
+        # dialect: org.hibernate.dialect.H2Dialect
+
+        # ---------- MSSQL ----------
+        # dialect: org.hibernate.dialect.SQLServerDialect
+
         format_sql: true
         jdbc:
           batch_size: 50
@@ -41,18 +117,22 @@ spring:
         order_inserts: true
         order_updates: true
         batch_versioned_data: true
+
   jackson:
     serialization:
       write-dates-as-timestamps: false
     date-format: yyyy-MM-dd HH:mm:ss
     default-property-inclusion: non_null
+
   graphql:
     graphiql:
       enabled: true
+
   cache:
     type: redis
     redis:
       time-to-live: 60000
+
   data:
     redis:
       host: localhost
@@ -62,6 +142,7 @@ spring:
           max-active: 8
           max-idle: 8
           min-idle: 0
+
   security:
     oauth2:
       resourceserver:

@@ -33,6 +33,13 @@ export function generate(params: any): string {
             <!-- <property name="jakarta.persistence.jdbc.user" value="system"/> -->
             <!-- <property name="jakarta.persistence.jdbc.password" value="your_password"/> -->
             
+            <!-- H2 -->
+            <!-- <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="jakarta.persistence.jdbc.url"
+                value="jdbc:h2:mem:review_project;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE" />
+            <property name="jakarta.persistence.jdbc.user" value="sa" />
+            <property name="jakarta.persistence.jdbc.password" value="" /> -->
+            
             <!-- Hibernate Config For Database -->
             <!-- PostgreSQL -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
@@ -40,6 +47,8 @@ export function generate(params: any): string {
             <!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/> -->
             <!-- Oracle -->
             <!-- <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/> -->
+            <!-- H2 -->
+            <!-- <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" /> -->
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>

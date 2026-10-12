@@ -8,16 +8,45 @@ server.compression.enabled=true
 spring.application.name=my-application
 
 # Database
+# MySQL
 spring.datasource.url=jdbc:mysql://localhost:3306/mydb?useSSL=false&serverTimezone=UTC
 spring.datasource.username=root
 spring.datasource.password=root
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+# PostgreSQL
+# spring.datasource.url=jdbc:postgresql://localhost:5432/mydb
+# spring.datasource.username=postgres
+# spring.datasource.password=postgres
+# spring.datasource.driver-class-name=org.postgresql.Driver
+# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# Oracle
+# spring.datasource.url=jdbc:oracle:thin:@localhost:1521/XEPDB1
+# spring.datasource.username=system
+# spring.datasource.password=oracle
+# spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.OracleDialect
+
+# H2
+# spring.datasource.url=jdbc:h2:mem:mydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+# spring.datasource.username=sa
+# spring.datasource.password=
+# spring.datasource.driver-class-name=org.h2.Driver
+# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+
+#MSSQL
+# spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=mydb;encrypt=true;trustServerCertificate=true
+# spring.datasource.username=sa
+# spring.datasource.password=YourStrong@Password
+# spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+# spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServerDialect
 
 # JPA/Hibernate
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=false
 spring.jpa.properties.hibernate.format_sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
 # Logging
 logging.level.root=INFO
@@ -43,5 +72,6 @@ spring.thymeleaf.prefix=classpath:/templates/
 # DevTools
 spring.devtools.restart.enabled=true
 spring.devtools.livereload.enabled=true
+
 `;
 }
