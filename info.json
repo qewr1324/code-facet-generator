@@ -329,6 +329,28 @@
 				"2023": "./lib/java/spring-cloud/v2023.ts"
 			}
 		},
+		"spring-context": {
+			"name": "applicationContext",
+			"extension": ".xml",
+			"route": "./src/main/resources/~",
+			"description": "Spring Application Context XML Configuration",
+			"version": {
+				"6.0": "./lib/java/spring-context/v6.0.ts",
+				"6.1": "./lib/java/spring-context/v6.1.ts",
+				"6.2": "./lib/java/spring-context/v6.2.ts"
+			}
+		},
+		"dispatcher-servlet": {
+			"name": "dispatcher-servlet",
+			"extension": ".xml",
+			"route": "./src/main/webapp/WEB-INF/~",
+			"description": "Spring MVC Dispatcher Servlet Configuration",
+			"version": {
+				"6.0": "./lib/java/dispatcher-servlet/v6.0.ts",
+				"6.1": "./lib/java/dispatcher-servlet/v6.1.ts",
+				"6.2": "./lib/java/dispatcher-servlet/v6.2.ts"
+			}
+		},
 		"graalvm": {
 			"name": "native-image",
 			"extension": ".properties",
